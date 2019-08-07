@@ -1,10 +1,10 @@
 # angular-flask
 
 requirements:
-python3
-flask
-nodejs 10
-angular cli
+1. python3
+2. flask
+3. nodejs 10
+4. angular cli
 
 
 how to run:
