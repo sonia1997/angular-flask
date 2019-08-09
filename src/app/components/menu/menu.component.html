@@ -1,0 +1,86 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--3-col">
+    <div class="mdl-grid mdl-grid--nesting">
+      <div class="mdl-cell mdl-cell--6-col lable-text">
+        <b>Select Document</b>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col"> <select name="" id="" class="select-document">
+          <option value="inv1">inv1.jpg</option>
+		  <option value="inv2">inv2.jpg</option>
+		  <option value="inv3">inv3.jpg</option>
+        </select>
+		
+      </div>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col ">
+    <div class="mdl-grid mdl-grid--nesting">
+      <div class="mdl-cell mdl-cell--6-col lable-text">
+        <b>or Upload Document</b>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col">
+	  <input #file type="file" accept='image/*' (change)="uploadFile(file.files)"  hidden/>
+		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"(click)="file.click()">
+		Upload
+		</button>
+	  <!--<input hidden type="file" #uploader (change)="uploadFile($event)" />
+		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="uploader.click()">
+		Upload
+		</button>-->
+		
+		
+        <!--input type="file" class="form-control" id="file" name="file"  />-->
+        <!-- <input  class = "mdl-button mdl-js-button mdl-button--raised mdl-button--colored " type="button" value="Upload Document"  /> -->
+      </div>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col ">
+    <div class="mdl-grid mdl-grid--nesting">
+      <div class="mdl-cell mdl-cell--6-col lable-text">
+        <b>or Select Template(
+          <a [routerLink]="['/add']">
+            Add
+          </a>
+		  
+          /
+          <a [routerLink]="['/show']">
+            Show
+          </a>
+          )</b>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col"> <select name="" id="" class="select-document">
+          <option value="inv1">inv1.jpg</option>
+		  <option value="inv2">inv2.jpg</option>
+		  <option value="inv3">inv3.jpg</option>		  
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col ">
+    <div class="mdl-grid mdl-grid--nesting">
+      <div class="mdl-cell mdl-cell--12-col">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored submit-button"(click)="onSubmit()">
+          Submit
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="mdl-grid" [hidden]="isHidden">
+  <div class="mdl-cell mdl-cell--1-col"></div>
+  <div class="mdl-cell mdl-cell--10-col">
+    <div class="mdl-grid mdl-grid--nesting">
+      <div class="mdl-cell mdl-cell--6-col block-1">
+        <!-- add more -->
+			  <img [src]="imgURL" height="300" *ngIf="imgURL">
+
+      </div>
+      <div class="mdl-cell mdl-cell--6-col block-2">
+        <!-- add more -->
+      </div>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--1-col"></div>
+</div>

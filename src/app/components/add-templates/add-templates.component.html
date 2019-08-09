@@ -1,0 +1,84 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <app-navbar></app-navbar>
+  <main class="mdl-layout__content">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--2-col"></div>
+      <div class="mdl-cell mdl-cell--8-col">
+        <div class="mdl-grid mdl-grid--nesting">
+          <div class="mdl-cell mdl-cell--12-col">
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="templatename" placeholder="Template name" />
+                <label class="mdl-textfield__label" for="username"></label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="mdl-grid mdl-grid--nesting">
+          <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp fullwidth " id= "template-table">
+            <thead>
+              <tr>
+                <th class="mdl-data-table__cell--non-numeric">Field</th>	
+                <th class="mdl-data-table__cell--non-numeric">Type</th>	
+                <th class="mdl-data-table__cell--non-numeric">Synonym</th>	
+
+				
+                <th class="mdl-data-table__cell--non-numeric">
+                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored add-new-row-button" (click)="addNewRowToTable()">
+                    <i class="material-icons">add</i>
+                  </button>	
+                </th>
+              </tr>  
+            </thead>
+			
+            <tbody>			
+              <tr *ngFor="let id of trIds;" id="{{id}}" >
+                <td class="mdl-data-table__cell--non-numeric">
+                  <input class="mdl-textfield__input" type="text" id="field-{{id}}" />
+                </td>
+				
+                <td class="mdl-data-table__cell--non-numeric">	
+			<select name="typedropdown1" id="typeid-{{id}}" class="select-document">
+				<option value="string" selected>string</option>
+				  <option value="number">number</option>
+				  <option value="date">date</option>
+				  <option value="price">price</option>
+        </select>
+                </td>				
+				
+                <td class="mdl-data-table__cell--non-numeric">
+                  <input class="mdl-textfield__input" type="text" id="synonims-{{id}}" />
+                </td>	
+
+				<td class="mdl-data-table__cell--non-numeric">
+				<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored add-new-row-button" (click)="removeRowFromTable(id)">
+                      <i class="material-icons">
+                          remove
+                          </i>
+                    </button>
+					</td>
+              </tr>		
+			  
+            </tbody>
+			
+          </table>
+        </div>
+        <div class="mdl-grid mdl-grid--nesting">
+          <div class="mdl-cell mdl-cell--2-col">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="getDataFromTable()">
+              Submit
+            </button>
+          </div>
+		  
+          <div class="mdl-cell mdl-cell--2-col">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" [routerLink]="['/']">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--2-col"></div>
+    </div>
+
+  </main>
+</div>

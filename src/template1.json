@@ -1,0 +1,1 @@
+{"filename": "template1", "fields": [{"field": "invoice number", "type": "number", "synonyms": ["inv number", " inv #"]}, {"field": "invoice date", "type": "date", "synonyms": ["inv date", " inv dt"]}, {"field": "invoice amount", "type": "price", "synonyms": ["inv price", " inv amount"]}]}

@@ -1,0 +1,37 @@
+.graybox {
+  background-color:#ddd;
+}
+
+.select-document {
+  background-color: #ffffff;
+  font-size: 14px;
+  height: 35px;
+  padding: 5px;
+  width: 100%;
+  border-radius: 4px;
+}
+.lable-text {
+  font-size: 14px;
+}
+.submit-button {
+  width: 150px
+}
+.block-1 {
+  padding: 5% 9%;
+  display: block;
+  border: 1px solid rgb(225, 225, 227);
+  height: 500px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 2%;
+}
+.block-2 {
+  padding: 5% 9%;
+  display: block;
+  border: 1px solid rgb(225, 225, 227);
+  height: 500px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 2%;
+}
+[hidden] {
+  display: none !important;
+}
